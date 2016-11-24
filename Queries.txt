@@ -1,8 +1,39 @@
 use northwind;
 
-SELECT orders.id, customers.first_name,customers.last_name, 
-orders.order_date
+show tables;
+
+select count(*) from customers;
+
+SELECT orders.id, customers.first_name,customers.last_name, orders.order_date 
+
 FROM orders
-INNER JOIN customers
-ON orders.customer_id=Customers.id 
-ORDER BY customer.last_name;
+
+INNER JOIN customers 
+
+ON Orders.Customer_id=Customers.id
+ 
+Order By customers.last_name;
+
+SELECT * FROM customers 
+
+WHERE first_name LIKE '%a';
+
+SELECT MAX(standard_cost) AS HighestPrice 
+FROM products;
+
+SELECT COUNT(customer_id) AS OrdersFromCustomerID7 
+
+FROM Orders
+ 
+WHERE customer_id = 7;
+
+SELECT * FROM Customers
+
+WHERE country_region = 'USA'
+AND (city = 'Los Angelas');
+
+SELECT * FROM products 
+
+WHERE product_name = 'Northwind Traders Mozzarella' 
+
+OR quantity_per_unit > 5;
